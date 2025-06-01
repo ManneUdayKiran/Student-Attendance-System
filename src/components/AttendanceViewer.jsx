@@ -6,7 +6,7 @@ const AttendanceViewer = () => {
   const [records, setRecords] = useState([]);
 
   const fetchAttendance = async () => {
-    const res = await axios.get(`http://localhost:5000/api/attendance/student/${studentId}`);
+    const res = await axios.get(`https://student-attendance-system-backend-ju7b.onrender.com/api/attendance/student/${studentId}`);
     setRecords(res.data);
   };
 

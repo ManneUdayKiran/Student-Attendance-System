@@ -10,7 +10,7 @@ const AttendanceForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:5000/api/attendance/add", form);
+    await axios.post("https://student-attendance-system-backend-ju7b.onrender.com/api/attendance/add", form);
     alert("Attendance recorded!");
     setForm({ studentId: "", studentName: "", present: true });
   };

@@ -7,7 +7,7 @@ const StudentList = () => {
   useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/attendance/all");
+        const res = await axios.get("https://student-attendance-system-backend-ju7b.onrender.com/api/attendance/all");
         setStudents(res.data);
       } catch (err) {
         console.error("Error fetching students:", err);

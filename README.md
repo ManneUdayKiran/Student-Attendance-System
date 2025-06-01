@@ -1,12 +1,117 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📘 Attendance Management System
 
-Currently, two official plugins are available:
+A web-based application for managing student attendance built using **React** (Vite) for the frontend and **Node.js / Express** for the backend.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+### 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Record attendance (Present/Absent)
+* View all student attendance records
+* Responsive user interface
+* RESTful API integration
+
+---
+
+### 🛠️ Tech Stack
+
+* **Frontend**: React + Vite
+* **Backend**: Node.js, Express
+* **Database**: MongoDB (or your choice)
+* **HTTP Client**: Axios
+
+---
+
+### 📦 Installation
+
+#### 1. Clone the repository
+
+```bash
+git clone https://github.com/ManneUdayKiran/attendance-management.git
+cd attendance-management
+```
+
+#### 2. Install dependencies
+
+```bash
+npm install
+```
+
+#### 3. Start the frontend (Vite)
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+#### 4. Start the backend (in `server/` or similar folder)
+
+```bash
+cd server
+npm install
+npm run dev
+```
+
+The backend will run on `http://localhost:5000`.
+
+---
+
+### 🌐 API Endpoints
+
+| Method | Endpoint              | Description                   |
+| ------ | --------------------- | ----------------------------- |
+| POST   | `/api/attendance/add` | Record a student’s attendance |
+| GET    | `/api/attendance/all` | Fetch all attendance records  |
+
+---
+
+### 📁 Project Structure
+
+```
+attendance-management/
+├── client/       # React frontend
+├── server/       # Express backend
+├── README.md
+├── package.json
+```
+
+---
+
+### 🧪 Example Form State
+
+```json
+{
+  "studentId": "12345",
+  "studentName": "John Doe",
+  "present": true
+}
+```
+
+---
+
+### 📤 Deployment
+
+For deploying to platforms like **Render**:
+
+#### 1. Update package.json
+
+```json
+"scripts": {
+  "build": "vite build",
+  "start": "vite preview --host 0.0.0.0 --port $PORT"
+}
+```
+
+#### 2. Render Start Command
+
+```bash
+npm run build && npm run start
+```
+
+---
+
+### 📄 License
+
+This project is licensed under the MIT License.
